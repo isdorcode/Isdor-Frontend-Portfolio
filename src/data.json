@@ -1,0 +1,21 @@
+
+[
+    {
+      "id": 1,
+      "name": "Thinny Web Shop",
+      "role": "An",
+      "email": "isdorcode@gmail.com",
+      "phone": "+263 787 635 499",
+      "address": "12002 Tongai Rd Zengeza, Chitungwiza",
+      "linkedin": "https://linkedin.com/in/isdor"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "role": "UI/UX Designer",
+      "email": "janedoe@example.com",
+      "phone": "+123 456 7890",
+      "address": "123 Main St, New York, USA",
+      "linkedin": "https://linkedin.com/in/janedoe"
+    }
+  ]

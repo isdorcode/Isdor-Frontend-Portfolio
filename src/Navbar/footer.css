@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'nunito';
+  src: url(../images/Nunito-Regular.ttf);
+}
+
+.footer {
+  font-family: 'nunito';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  color: #fff;
+  background-color: #255059;
+  width: 100%;
+}
+
+.git-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.git-links > img {
+  width: 64px;
+  height: 39px;
+  object-fit: contain;
+}
+
+.git-links > img:hover {
+  cursor: pointer;
+  scale: 1.2;
+  transition: .4s ease-in-out;
+}
+
+.tech1 {
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+.lin {
+  width: 80%;
+  max-width: 450px;
+  border: 1px solid #fff;
+}
+
+.footer-p {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .git-links {
+    gap: 1.5rem;
+  }
+  
+  .git-links > img {
+    width: 50px;
+    height: 30px;
+  }
+  
+  .lin {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 0;
+  }
+  
+  .git-links {
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .git-links > img {
+    width: 40px;
+    height: 24px;
+  }
+  
+  .footer-p {
+    font-size: 0.8rem;
+  }
+}

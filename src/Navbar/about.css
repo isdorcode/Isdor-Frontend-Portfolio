@@ -1,0 +1,305 @@
+@font-face {
+    font-family: 'Nunito-Regular';
+    src: url(../images/Nunito-Regular.ttf);
+  }
+
+/* Container */
+.modern-about-container {
+  background-color: #255059;
+  padding: 3rem;
+  border-radius: 5px;
+  max-width: 100%;
+  margin: 2rem auto;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', 'Nunito-Regular', sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  color: #fbfbff;
+  border: 1px solid #8338ec;
+  font-family: 'Nunito-Regular';
+}
+
+/* Header Section */
+.modern-about-header {
+  position: relative;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.modern-about-title {
+  font-size: 2.5rem;
+  color: #fbfbff;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  animation: fadeIn 1s ease-out;
+}
+
+.modern-about-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 25%;
+  width: 50%;
+  height: 4px;
+  background: #078C8C;
+  border-radius: 2px;
+}
+
+.modern-about-subtitle {
+  color: #F27B50;
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.modern-about-description {
+  font-size: 1rem;
+  color: #fbfbff;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  animation: slideInUp 1.5s ease-out;
+}
+
+/* Filter Toggle Button */
+.filter-toggle {
+  background-color: #078c8c;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  color: #fbfbff;
+  margin: 1.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(58, 134, 255, 0.3);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.filter-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(58, 134, 255, 0.4);
+}
+
+.filter-toggle-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-icon {
+  transition: transform 0.3s ease;
+}
+
+.filter-toggle:hover .filter-icon {
+  transform: rotate(-15deg);
+}
+
+.filter-badge {
+  background-color: #F27B50;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+
+.chevron-icon {
+  transition: transform 0.3s ease;
+}
+
+.chevron-icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* Filter Content */
+.filter-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  margin: 0 auto 1.5rem;
+  width: 90%;
+  padding: 0 1.5rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.filter-content.visible {
+  max-height: 800px;
+  opacity: 1;
+  padding: 1.5rem;
+}
+
+.filter-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.filter-category {
+  min-width: 200px;
+  flex: 1;
+}
+
+.category-title {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #078C8C;
+  padding-bottom: 8px;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-tag {
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fbfbff;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.filter-tag:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.filter-tag.selected {
+  background-color: #F27B50;
+  transform: scale(1.05);
+  animation: pulse 1.5s infinite;
+  border: 1px solid #F27B50;
+  box-shadow: 0 5px 15px rgba(255, 0, 110, 0.3);
+}
+
+.filter-actions {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.clear-button {
+  background-color: #16213e;
+  border: 1px solid #078C8C;
+  color: #fbfbff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+.clear-button:hover {
+  background-color: #212c4c;
+  transform: translateY(-2px);
+}
+
+/* Selected Tags Display */
+.selected-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  max-width: 80%;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.selected-tag {
+  background-color: #F27B50;
+  color: #fbfbff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: bounceIn 0.5s;
+  box-shadow: 0 4px 12px rgba(255, 0, 110, 0.2);
+}
+
+.remove-tag {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.remove-tag:hover {
+  transform: scale(1.2);
+}
+
+/* Contact Grid Section */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two-column layout */
+  gap: 1.5rem; /* Space between grid items */
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Contact Item */
+.contact-item {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px); /* Slight lifting effect */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Label */
+.contact-label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #078c8c;
+  margin-bottom: 0.5rem;
+}
+
+/* Contact Value */
+.contact-value {
+  font-size: 1rem;
+  color: #555;
+}
+
+.personal-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3a86ff;
+}
+
+.profile-image {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+}

@@ -1,0 +1,167 @@
+@font-face {
+  font-family: 'Nunito-Regular';
+  src: url(../images/Nunito-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url(../images/Poppins-Bold.ttf);
+}
+
+.about-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-header > h2 {
+  font-size: 2.5rem;
+  color: #000000;
+  font-family: 'Poppins-Bold';
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.about-header > p {
+  color: #078C8C;
+  font-family: 'Nunito-Regular';
+  font-size: 1.1rem;
+  margin: 8px 0 1.5rem 0;
+  text-align: center;
+}
+
+.projects-section {
+  width: 100%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+/* Top grid for the 3 cards (middle one larger) */
+.top-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 95%;
+  margin: 1.5rem auto;
+}
+
+/* Bottom grid for the 2 cards (50% width each) */
+.bottom-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 95%;
+  margin: 1.5rem auto;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8rem;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+}
+
+.project-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image-container {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image {
+  width: 100%;
+  height: 30vh;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.project-content h3 {
+  font-family: 'Nunito-Regular';
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.project-content p {
+  font-family: 'Nunito-Regular';
+  color: #fff;
+  line-height: 1.5;
+  font-size: 0.8rem;
+  margin: 6px 0;
+}
+
+/* Responsive breakpoints */
+@media (min-width: 576px) {
+  .bottom-projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .top-projects-grid {
+    grid-template-columns: 1fr 1.25fr 1fr;
+  }
+  
+  .project-card.featured-card {
+    transform: scale(1.03);
+  }
+  
+  .project-card.featured-card:hover {
+    transform: scale(1.06);
+  }
+  
+  .project-card.featured-card .project-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .project-card.featured-card .project-content p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 992px) {
+  
+  .project-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .project-content p {
+    font-size: 0.8rem;
+  }
+  
+  .project-card.featured-card .project-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .project-card.featured-card .project-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* For even larger screens */
+@media (min-width: 1200px) {
+  .project-card.featured-card {
+    padding: 1.2rem;
+  }
+
+}

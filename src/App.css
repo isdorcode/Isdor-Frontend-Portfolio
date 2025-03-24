@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'poppins';
+  src: url(./images/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'nunito';
+  src: url(./images/Nunito-Regular.ttf);
+}
+
+.App{
+ overflow-x: hidden;
+}

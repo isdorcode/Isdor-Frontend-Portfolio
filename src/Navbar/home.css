@@ -1,0 +1,398 @@
+@font-face {
+  font-family: 'Nunito-Regular';
+  src: url(../images/Nunito-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url(../images/Poppins-Bold.ttf);
+}
+
+/* General Styles */
+.main {
+  margin: 0 1rem 4rem 1rem;
+  padding: 1rem 4rem;
+}
+
+.banner-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 80vh;
+  flex-wrap: wrap; /* Wrap for responsiveness */
+  gap: 2rem;
+}
+
+.text {
+  width: 50%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.main-imae {
+  width: 42%;
+  height: auto;
+  object-fit: contain;
+  animation: slideInRight 1s ease-in-out;
+}
+
+.freelance > p {
+  font-family: 'Nunito-Regular', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.first-line {
+  border: none;
+  height: 2px;
+  background-color: #f27b50;
+  width: 47%;
+}
+
+.text > h3 {
+  font-family: 'Nunito-Regular', sans-serif;
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.text > h1 {
+  font-family: 'Poppins-Bold', sans-serif;
+  font-size: 4rem;
+  margin: 0;
+  color: #078c8c;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.freelance {
+  margin-bottom: 20px;
+}
+
+.front {
+  width: 100%;
+  object-fit: contain;
+  max-width: 500px;
+}
+
+.btn {
+  background-color: #f27b50;
+  width: 130px;
+  height: 42px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+
+.btn:hover {
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(242, 123, 80, 0.3);
+  transform: translateY(-2px);
+}
+
+.link-1 {
+  width: 13px;
+  height: 13px;
+  margin-left: 7px;
+}
+
+.text > p {
+  font-size: 16px;
+  font-family: 'Nunito-Regular', sans-serif;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.online-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #078c8c;
+  height: 80px;
+  border-radius: 10px;
+  animation: fadeInUp 1s ease-in-out;
+  box-shadow: 0 4px 10px rgba(7, 140, 140, 0.2);
+}
+
+.media-icon {
+  width: 64px;
+  height: 39px;
+  object-fit: contain;
+}
+
+.live {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.live:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.live-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.cater1 {
+  font-family: 'Nunito-Regular';
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 100;
+  margin: 2px;
+}
+
+.description {
+  font-family: 'Nunito-Regular';
+  font-size: 13px;
+  color: #ffffff;
+  margin: 2px;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 1001;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  animation: slideInUp 0.3s ease-in-out;
+  max-width: 90%;
+  width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+  color: #078c8c;
+  margin-top: 0;
+}
+
+.modal button {
+  background-color: #f27b50;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.modal button:hover {
+  background-color: #078c8c;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .main {
+    padding: 1rem 3rem;
+    padding-top: 5rem;
+  }
+  
+  .text > h1 {
+    font-size: 3.5rem;
+  }
+  
+  .text > h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .text > h1 {
+    font-size: 3rem;
+  }
+  
+  .text > h3 {
+    font-size: 1.8rem;
+  }
+  
+  .online-links {
+    height: auto;
+    padding: 15px 10px;
+  }
+  
+  .live {
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem 1.5rem;
+    padding-top: 5rem;
+    margin: 0 0.5rem 3rem 0.5rem;
+  }
+  
+  .banner-con {
+    flex-direction: column-reverse;
+    height: auto;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .text,
+  .main-imae {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .main-imae {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .text > h1 {
+    font-size: 2.5rem;
+  }
+  
+  .text > h3 {
+    font-size: 1.6rem;
+  }
+  
+  .first-line {
+    width: 50%;
+    margin: 0.5rem auto;
+  }
+  
+  .btn {
+    margin: 1.5rem auto;
+  }
+  
+  .online-links {
+    padding: 20px 10px;
+  }
+  
+  .live {
+    margin: 8px 0;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .media-icon {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 1rem;
+    padding-top: 4.5rem;
+  }
+  
+  .text > h1 {
+    font-size: 2rem;
+  }
+  
+  .text > h3 {
+    font-size: 1.4rem;
+  }
+  
+  .text > p {
+    font-size: 14px;
+  }
+  
+  .front {
+    max-width: 100%;
+  }
+  
+  .freelance > p {
+    font-size: 13px;
+  }
+  
+  .online-links {
+    display: none;
+  }
+  
+  .media-icon {
+    width: 50px;
+    height: 30px;
+  }
+  
+  .cater1 {
+    font-size: 14px;
+  }
+  
+  .description {
+    font-size: 12px;
+  }
+  
+  .modal {
+    padding: 20px;
+  }
+}
