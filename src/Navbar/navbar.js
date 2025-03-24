@@ -57,11 +57,11 @@ const Navbar = () => {
       
       <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
         <ul>
-          <li><a onClick={() => scrollToSection('home')}>Home</a></li>
-          <li><a onClick={() => scrollToSection('about')}>About</a></li>
-          <li><a onClick={() => scrollToSection('project')}>Projects</a></li>
-          <li><a onClick={() => scrollToSection('test')}>Testimonials</a></li>
-          <li><a onClick={() => scrollToSection('contact')}>Contact</a></li>
+        <li><a href="#home" onClick={() => scrollToSection('home')}>Home</a></li>
+        <li><a href="#about" onClick={() => scrollToSection('about')}>About</a></li>
+<li><a href="#project" onClick={() => scrollToSection('project')}>Projects</a></li>
+        <li><a href="#test" onClick={() => scrollToSection('test')}>Testimonials</a></li>
+        <li><a href="#contact" onClick={() => scrollToSection('contact')}>Contact</a></li>
         </ul>
       </div>
       
