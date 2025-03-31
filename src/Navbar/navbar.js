@@ -3,7 +3,6 @@ import logos from '../images/logo.png';
 import vet from '../images/Vector.png';
 import './navbar.css';
 
-
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,24 +27,25 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+    document.body.classList.toggle('menu-open');
   };
-
   
   const scrollToSection = (sectionId) => {
+    setMenuOpen(false);
+    document.body.classList.remove('menu-open');
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-
   return (
     <div className={`main-nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="logo">
-        <img 
-          src={logos} 
-          alt="Logo" 
-          className={`logo-img ${scrolled ? 'logo-scrolled' : ''}`} 
+        <img
+          src={logos}
+          alt="Logo"
+          className={`logo-img ${scrolled ? 'logo-scrolled' : ''}`}
         />
       </div>
       
@@ -56,12 +56,16 @@ const Navbar = () => {
       </div>
       
       <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
+        <div className="nav-curtain"></div>
+        <div className="nav-curtain"></div>
+        <div className="nav-curtain"></div>
+        
         <ul>
-        <li><a href="#home" onClick={() => scrollToSection('home')}>Home</a></li>
-        <li><a href="#about" onClick={() => scrollToSection('about')}>About</a></li>
-<li><a href="#project" onClick={() => scrollToSection('project')}>Projects</a></li>
-        <li><a href="#test" onClick={() => scrollToSection('test')}>Testimonials</a></li>
-        <li><a href="#contact" onClick={() => scrollToSection('contact')}>Contact</a></li>
+          <li><a href="#home" onClick={() => scrollToSection('home')}>Home</a></li>
+          <li><a href="#about" onClick={() => scrollToSection('about')}>About</a></li>
+          <li><a href="#project" onClick={() => scrollToSection('project')}>Projects</a></li>
+          <li><a href="#test" onClick={() => scrollToSection('test')}>Testimonials</a></li>
+          <li><a href="#contact" onClick={() => scrollToSection('contact')}>Contact</a></li>
         </ul>
       </div>
       
