@@ -111,7 +111,7 @@ const Banner = () => {
         <div className="modal-overlay">
           <div className="modal">
             <h2>Get in Touch</h2>
-            <p>Feel free to reach out for collaborations or inquiries!</p>
+            <p>Feel free to reach out for collaborations or inquiries!</p>  
             <button onClick={closeModal}>Close</button>
           </div>
         </div>
